@@ -103,8 +103,8 @@
 		6103921B2CD24BFB00B4983D /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				6103921C2CD24C0F00B4983D /* LoginView.swift */,
-				610392272CD259A200B4983D /* LoginViewModel.swift */,
+				61DF409E2CD5659800EC2306 /* ViewModels */,
+				61DF409D2CD5659200EC2306 /* Views */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -209,14 +209,14 @@
 		61B899CE2CD0C57E0078C632 /* CryptoAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				61B899CF2CD0C57E0078C632 /* CryptoAppTestApp.swift */,
+				61B899DF2CD0D7B30078C632 /* Core */,
+				6103921E2CD24CA800B4983D /* CustomComponents */,
 				6103923C2CD26F7700B4983D /* Managers */,
 				610392242CD2553700B4983D /* Resources */,
-				6103921E2CD24CA800B4983D /* CustomComponents */,
 				61B899E02CD0D7E50078C632 /* Models */,
-				61B899DF2CD0D7B30078C632 /* Core */,
 				61B899DE2CD0D7AB0078C632 /* Services */,
 				61B899DD2CD0D78F0078C632 /* Utilities */,
-				61B899CF2CD0C57E0078C632 /* CryptoAppTestApp.swift */,
 				61B899D32CD0C57F0078C632 /* Assets.xcassets */,
 				61B899D52CD0C57F0078C632 /* Preview Content */,
 			);
@@ -256,7 +256,6 @@
 			children = (
 				6103921B2CD24BFB00B4983D /* Auth */,
 				61B899E22CD0D7FA0078C632 /* Home */,
-				61B899E12CD0D7F40078C632 /* Launch */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -275,22 +274,47 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		61B899E12CD0D7F40078C632 /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Launch;
-			sourceTree = "<group>";
-		};
 		61B899E22CD0D7FA0078C632 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				61B899E72CD0DEE50078C632 /* ChartView.swift */,
-				61B899EC2CD0E8EF0078C632 /* HomeView.swift */,
-				610392332CD26E0000B4983D /* MainView.swift */,
-				610392352CD26E4E00B4983D /* ProvidersViewModel.swift */,
+				61DF409C2CD5658A00EC2306 /* ViewModels */,
+				61DF409B2CD5658000EC2306 /* Views */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		61DF409B2CD5658000EC2306 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				610392332CD26E0000B4983D /* MainView.swift */,
+				61B899EC2CD0E8EF0078C632 /* HomeView.swift */,
+				61B899E72CD0DEE50078C632 /* ChartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		61DF409C2CD5658A00EC2306 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				610392352CD26E4E00B4983D /* ProvidersViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		61DF409D2CD5659200EC2306 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6103921C2CD24C0F00B4983D /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		61DF409E2CD5659800EC2306 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				610392272CD259A200B4983D /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
