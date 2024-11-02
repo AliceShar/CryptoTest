@@ -82,8 +82,10 @@ final class SocketClient: WebSocketDelegate, SocketClientProtocol {
             isConnected = false
         case .viabilityChanged(_):
             break
-        case .reconnectSuggested(_):
-            break
+        case .reconnectSuggested(let bool):
+            if bool {
+                connectTo()
+            }
         case .cancelled:
             isConnected = false
         case .peerClosed:
