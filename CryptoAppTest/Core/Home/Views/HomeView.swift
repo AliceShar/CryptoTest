@@ -34,8 +34,12 @@ struct HomeView: View {
             .frame(maxWidth: geo.size.width, maxHeight: geo.size.height)
         }
         .onAppear {
+            providersVM.configureObservers()
             providersVM.getProviders()
             providersVM.connectSocket()
+        }
+        .onDisappear {
+            providersVM.unsubscribeFromObservers()
         }
         .toast(
             isPresenting: $providersVM.alertIsShown,
@@ -79,7 +83,7 @@ extension HomeView {
                     .padding(.horizontal)
 
                 HStack {
-                    marketDataItem(title: "Symbol:", value: providersVM.selectedCurrency?.symbol ?? "")
+                    marketDataItem(title: "Symbol:", value: providersVM.selectedCurrency?.symbol ?? "-")
                     Spacer()
                     marketDataItem(title: "Price:", value: providersVM.marketDataIsLoading ? "loading.." : String(format: "%.3f", providersVM.recievedCurrencyData?.last.price ?? 0))
                     Spacer()

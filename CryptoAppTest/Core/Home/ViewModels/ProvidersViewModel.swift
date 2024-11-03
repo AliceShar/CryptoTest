@@ -8,6 +8,7 @@
 import Foundation
 import AlertToast
 import SwiftUI
+import Combine
 
 final class ProvidersViewModel: ObservableObject {
     
@@ -17,6 +18,7 @@ final class ProvidersViewModel: ObservableObject {
     
     private let userStorage: UserStorage = UserStorage.shared
     private var previousSelectedCurrency: Instrument? = nil
+    private var cancellables: Set<AnyCancellable> = []
     
     @Published var cannotSelectCurrency: Bool = false
     @Published var providersIsLoading: Bool = true
@@ -50,8 +52,6 @@ final class ProvidersViewModel: ObservableObject {
         self.providersManager = providersManager
         self.socketClient = socketClient
         self.networkMonitor = networkMonitor
-        
-        configureObservers()
     }
     
     func connectSocket() {
@@ -107,11 +107,26 @@ final class ProvidersViewModel: ObservableObject {
         socketClient.sendCurrency(currency: newSelectedCurrency)
     }
     
-    private func configureObservers() {
+    func configureObservers() {
         $marketDataIsLoading
             .combineLatest(networkMonitor.$isConnected)
             .map { $0 || !$1 }
-            .assign(to: &$cannotSelectCurrency)
+            .sink { [weak self] cannotSelectCurrency in
+                self?.cannotSelectCurrency = cannotSelectCurrency
+            }
+            .store(in: &cancellables)
+        
+        networkMonitor.$isConnected
+            .sink { [weak self] bool in
+                if self?.providers == nil {
+                    self?.getProviders()
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
+    func unsubscribeFromObservers() {
+            cancellables.removeAll()
     }
     
     private func getHistoricalPrices() {

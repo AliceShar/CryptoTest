@@ -67,7 +67,7 @@ struct DropDownMenu: View {
                        }
                    }, label: {
                        HStack(spacing: nil) {
-                           Text(selectedOption?.symbol ?? "Select an option")
+                           Text(selectedOption?.symbol ?? "Select")
                                .withDefaultTextFormatting(textSixe: .headline, isBold: false)// Placeholder text if nil
                            Spacer()
                            Image(systemName: "chevron.up")

@@ -11,7 +11,8 @@ import Starscream
 final class SocketClient: WebSocketDelegate, SocketClientProtocol {
     
     typealias EventsHandlerCallback = (MarketDataResponce?) -> Void
-
+    var isConnected: Bool = false
+    
     // MARK: - Private properties
 
     private var eventsQueue: DispatchQueue = .main
@@ -19,7 +20,6 @@ final class SocketClient: WebSocketDelegate, SocketClientProtocol {
     private var socket: WebSocket?
     private let baseUrlString: String = "wss://platform.fintacharts.com"
     private let userStorage: UserStorage = UserStorage.shared
-    private var isConnected: Bool = false
     
     // MARK: - Public methods
 
