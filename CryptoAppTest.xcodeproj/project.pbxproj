@@ -38,6 +38,7 @@
 		6138FF6E2CD4D94400D80755 /* MarketDataResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138FF6D2CD4D94400D80755 /* MarketDataResponce.swift */; };
 		6138FF712CD4E8B300D80755 /* SocketClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138FF702CD4E8B300D80755 /* SocketClientProtocol.swift */; };
 		6166A0862CD409A000D6AF15 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 6166A0852CD409A000D6AF15 /* Starscream */; };
+		61702EF52CD74C0100AC8790 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61702EF42CD74C0100AC8790 /* NetworkManager.swift */; };
 		618D0B6C2CD3C0ED0008D3EF /* DropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D0B6B2CD3C0ED0008D3EF /* DropDownMenu.swift */; };
 		61B899D02CD0C57E0078C632 /* CryptoAppTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B899CF2CD0C57E0078C632 /* CryptoAppTestApp.swift */; };
 		61B899D42CD0C57F0078C632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61B899D32CD0C57F0078C632 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		6138FF6B2CD4D93600D80755 /* MarketDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataRequest.swift; sourceTree = "<group>"; };
 		6138FF6D2CD4D94400D80755 /* MarketDataResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataResponce.swift; sourceTree = "<group>"; };
 		6138FF702CD4E8B300D80755 /* SocketClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClientProtocol.swift; sourceTree = "<group>"; };
+		61702EF42CD74C0100AC8790 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		618D0B6B2CD3C0ED0008D3EF /* DropDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenu.swift; sourceTree = "<group>"; };
 		61B899CC2CD0C57D0078C632 /* CryptoAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B899CF2CD0C57E0078C632 /* CryptoAppTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppTestApp.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				6103923D2CD26F8900B4983D /* AuthManager.swift */,
 				6103923F2CD26F9600B4983D /* ProvidersManager.swift */,
+				61702EF42CD74C0100AC8790 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				610392362CD26E4E00B4983D /* ProvidersViewModel.swift in Sources */,
 				6103923E2CD26F8900B4983D /* AuthManager.swift in Sources */,
 				618D0B6C2CD3C0ED0008D3EF /* DropDownMenu.swift in Sources */,
+				61702EF52CD74C0100AC8790 /* NetworkManager.swift in Sources */,
 				61B899D02CD0C57E0078C632 /* CryptoAppTestApp.swift in Sources */,
 				61B899E42CD0D9EA0078C632 /* WebSocketClient.swift in Sources */,
 				6103922B2CD26D1E00B4983D /* View+Extension.swift in Sources */,

@@ -62,7 +62,7 @@ extension HomeView {
                     geo: geo,
                     selectedOption: $providersVM.selectedCurrency,
                     showDropdown: $showDropdown,
-                    cannotSelectCurrency: $providersVM.marketDataIsLoading
+                    cannotSelectCurrency: $providersVM.cannotSelectCurrency
                 )
                 
                 Text("Choose currency")

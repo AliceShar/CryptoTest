@@ -192,7 +192,7 @@ struct FinanceChartView: View {
 #Preview {
     GeometryReader { geo in
         FinanceChartView(geo: geo)
-            .environmentObject(ProvidersViewModel(providersManager: ProvidersManager(), socketClient: SocketClient()))
+            .environmentObject(ProvidersViewModel(providersManager: ProvidersManager(), socketClient: SocketClient(), networkMonitor: NetworkMonitor()))
     }
 }
 

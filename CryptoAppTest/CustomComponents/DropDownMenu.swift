@@ -30,7 +30,7 @@ struct DropDownMenu: View {
                            LazyVStack(spacing: 0) {
                                ForEach(0..<options.count, id: \.self) { index in
                                    Button(action: {
-                                       guard showDropdown else { return }
+                                       guard showDropdown && !cannotSelectCurrency else { return }
                                        withAnimation {
                                                selectedOption = options[index]
                                                showDropdown = false

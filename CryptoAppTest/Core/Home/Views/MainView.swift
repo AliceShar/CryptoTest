@@ -14,9 +14,9 @@ struct MainView: View {
     @StateObject private var authVM: LoginViewModel
     @StateObject private var providersVM: ProvidersViewModel
     
-    init(authManager: AuthManager, providersManager: ProvidersManager, socketClient: SocketClient) {
+    init(authManager: AuthManager, providersManager: ProvidersManager, socketClient: SocketClient, networkMonitor: NetworkMonitor) {
         _authVM = StateObject(wrappedValue: LoginViewModel(authManager: authManager))
-        _providersVM = StateObject(wrappedValue: ProvidersViewModel(providersManager: providersManager, socketClient: socketClient))
+        _providersVM = StateObject(wrappedValue: ProvidersViewModel(providersManager: providersManager, socketClient: socketClient, networkMonitor: networkMonitor))
     }
     
     var body: some View {

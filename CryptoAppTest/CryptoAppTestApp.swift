@@ -13,10 +13,11 @@ struct CryptoAppTestApp: App {
     let authManager = AuthManager()
     let providersManager = ProvidersManager()
     let socketClient = SocketClient()
+    let networkMonitorManager = NetworkMonitor()
     
     var body: some Scene {
         WindowGroup {
-            MainView(authManager: authManager, providersManager: providersManager, socketClient: socketClient)
+            MainView(authManager: authManager, providersManager: providersManager, socketClient: socketClient, networkMonitor: networkMonitorManager)
         }
     }
 }
